@@ -1,0 +1,24 @@
+<h2> <%= @company.name%></h2>
+<h3>Offices:</h3>
+<% @company.offices.each do |office|%>
+<ul>
+<li><%= office.building.name%></li>
+</ul>
+<%end%>
+
+<h3>Employees:</h3>
+<% @company.employees.each do |employee|%>
+<ul>
+<li><%= employee.name%></li>
+</ul>
+<%end%>
+
+<%= form_for @employee do |f|%>
+<%= f.label :title%>
+<%= f.text_field :title%>
+
+<%= f.label :title%>
+<%= f.text_field :title%>
+
+<%= f.submit%>
+<%end%>
